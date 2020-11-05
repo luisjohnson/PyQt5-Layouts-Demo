@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Color Demo")
+        self.setWindowTitle("Horizontal Layout Demo")
 
         layout = QHBoxLayout()
 
