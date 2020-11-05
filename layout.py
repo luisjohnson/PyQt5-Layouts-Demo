@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout
 
 from color_widget import Color
 
@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("Color Demo")
 
-        layout = QVBoxLayout()
+        layout = QHBoxLayout()
 
         layout.addWidget(Color('red'))
         layout.addWidget(Color('green'))
