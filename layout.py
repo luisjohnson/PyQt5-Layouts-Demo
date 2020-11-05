@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout
 
 from color_widget import Color
 
@@ -10,7 +10,16 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Color Demo")
-        widget = Color('red')
+
+        layout = QVBoxLayout()
+
+        layout.addWidget(Color('red'))
+        layout.addWidget(Color('green'))
+        layout.addWidget(Color('blue'))
+
+        # In order to add a layout to a QMainWindow, we need to add the layout to a dummy widget.
+        widget = QWidget()
+        widget.setLayout(layout)
         self.setCentralWidget(widget)
 
 
